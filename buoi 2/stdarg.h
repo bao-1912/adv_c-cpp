@@ -9,7 +9,7 @@ va_start(args,count);
 va_copy(check,args);
 
 int result = count;
-while (va_arg(check,char) !='a')
+while (va_arg(check,char*) !='a')
 {
      result += va_arg(args, int);
 }
