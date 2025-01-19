@@ -1,0 +1,27 @@
+để viết code ta cần ứng dung ide(vscode, dev c/c++,...)
+trong ide gồm:
+-editor(trình soạn thảo văn bang): viết, chỉnh sửa 
+-compiler(trình biên dịch): mỗi ied có trình biên dịch khác nhau giúp chuyển từ ngôn ngữ bật cao thành ngôn ngữ máy hiểu được(gcc/g++, avr-gcc,...)
+quá trình biên dịch gồm 4 bước: tiền xử lí, biên dịch, hợp dịch, liên kết
+-tiền xử lý:
+file .c thông qua quá trình tiền xử lí tạo thành file main.i
+copy các mã nguồn được đưa vào 
+xóa các chú thích
+thay thế macro defined
+câu lệnh tạo file .i gcc -E main.c -o main.i
+câu lệnh tạo file .s gcc -E main.i -o main.s
+câu lệnh tạo file .o gcc -E main.s -o main.o
+macro: từ chỉ thông tin sẽ được xử lí ở quá trình tiền xử lí
+có nhiều loại
+#inclue: chỉ thị bao hàm tệp(thêm vào các thư viện, các thư mục khi quá trình tiền xử lí xảy ra vào main.i)
+inclue<> tìm trong file cài đặt, 
+inclue"" tìm trong thư mục hiện tại
+#define: chỉ thị định nghĩa (thay thế,định nghĩ biểu thức hoặc một giá trị 
+##: toán tử marco được dung để nối các chuỗi lại với nhau
+#: chuyển hóa 1 đoạn văn bản lên chuỗi
+macro variadic: sử dung trong các hàm có số lượng tham số đầu vào k sát định
+#undef: hủy định nghĩa 
+#ifndef,#ifdef,#else,#if,#elif: được gọi chung là chỉ thị biên dịch có điều kiện
+#ifndef,#ifdef:kiểm tra xem macro đã được định nghĩa hay chưa nếu chưa sẽ bắt đầu định nghĩa, nếu rồi sẽ tiến hành thực hiện câu lệnh
+cả 2 được sử dụng để thiết kế thư viện
+#else,#if,#elif: kiểm tra điều kiện của macro
