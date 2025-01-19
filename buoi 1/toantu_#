@@ -1,1 +1,6 @@
-
+#include <stdio.h>
+#define STRING(x) #x  
+int main() {
+    printf("%s", STRING(Hello, World!)); 
+    return 0;
+}
