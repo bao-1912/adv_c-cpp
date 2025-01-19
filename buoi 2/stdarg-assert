@@ -1,1 +1,32 @@
+thư viện stdarg #include<stdarg.h>
+cung cấp phương thức làm việc với hàm có số lượng input parameter không cố định
+1 vài marco
+-va_list
+void test (int count,....)
+va_list args;
+va_list là kiểu dữ liệu chứa tham số không sát định
+-va_start
+va_start(args, count);
+với args là biến kiểu va_list
+với count là số lượng đối số
+bắt đầu từ tham số "count"
+-va_arg
+va_arg(args, int)
+va_arg dùng để lấy giá trị tham số trong danh sách
+với args là biến kiểu va_list
+với int là kiểu dữ liệu cần lấy có thể là char, int...
+-va_end
+va_end dùng để kết thúc danh sách
+va_end(args)
+với args là biến kiểu va_list
+-va_copy
+va_copy(check,args)
+với check là biến chưa các tham số được sao chép
+với args là nới chưa các tham số cần sao chép
+thư viên assert #incude<assert.h> 
+cung cấp các macro kiểm tra lỗi, điều kiện
+kiểm tra chương trình nếu lỗi sẽ dừng chương trình ngay lập tức
+assert(check)
+nếu (check) đúng chương trình sẽ tiếp tục chạy
+nếu sai chương trình sẽ dừng ngay lập tức
 
