@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdint.h>
+int main(int argc, char const *argv[])
+{
+    uint8_t user1 = 0b0001110;
+    uint8_t a = ~user1; // 0b 11110001
+printf("%d",a);
+return 0;
+}
