@@ -38,6 +38,8 @@ int main() {
 
     enableItem(&outfit, TSHIRT | PANTS | SHOES);
 
+    disableItem(&outfit, TSHIRT);
+
     listClothing(outfit);
 
     return 0;
