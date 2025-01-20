@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdint.h>
+
+#define TSHIRT         1 << 0  
+#define PANTS          1 << 1  
+#define SHOES          1 << 2  
+
+void enableItem(uint8_t *clothing, uint8_t item) {
+    *clothing |= item;
+}
+void disableItem(uint8_t *clothing, uint8_t item) {
+    *clothing &= ~item;
+}
+int isItemEnabled(uint8_t clothing, uint8_t item) {
+    return (clothing & item) != 0;
+}
+
+void listClothing(uint8_t clothing) {
+    printf("Selected Clothing Items:\n");
+
+    if (clothing & TSHIRT) {
+        printf("- T-Shirt\n");
+    }
+    if (clothing & PANTS) {
+        printf("- Pants\n");
+    }
+    if (clothing & SHOES) {
+        printf("- Shoes\n");
+    }
+}
+
+void removeItem(uint8_t *clothing, uint8_t unwantedItem) {
+    *clothing &= ~unwantedItem;
+}
+
+int main() {
+    uint8_t outfit = 0;  
+
+    enableItem(&outfit, TSHIRT | PANTS | SHOES);
+
+    listClothing(outfit);
+
+    return 0;
+}
