@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdint.h>
+int main(int argc, char const *argv[])
+{
+    uint8_t user1 = 0b00001110;
+    uint8_t user2 = 0b10101001;
+    uint8_t a = user1 ^ user 2;
+printf("%d",a);
+return 0;
+}
