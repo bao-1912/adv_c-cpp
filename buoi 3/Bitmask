@@ -1,1 +1,29 @@
-
+một số kiểu dữ liệu mới
+#include <stdint.h>
+int, int32_t, unit32_t: 4 bytes = 32 bit
+int8_t, uint8_t: 1 byte = 8 bit
+int16_t, uint16_t: 2 bytes = 16 bit
+bitmark sử dung các bit để lưu trữ và thao tác
+-not bitwise ~
+Dùng để thực hiện phép NOT bitwise trên từng bit của một số. Kết quả là bit đảo ngược của số đó. 1 thành 0 0 thành 1
+int a = ~ user-;
+-or bitwise |
+Dùng để thực hiện phép OR bitwise giữa từng cặp bit của hai số. Kết quả là 1 nếu có hơn một bit tương ứng là 1.
+int a = result 1 | result 2;
+ví du 1|0 => 1; 1|1 => 1; 0|1 =>0
+-and bitwise & 
+Dùng để thực hiện phép AND bitwise giữa từng cặp bit của hai số. Kết quả là 1 nếu cả hai bit  đều là 1, ngược lại là 0.
+int a = result 1 & result 2;
+ví dụ 1&0 => 0; 0&0=> 0; 1&1 =>1
+-xor bitwise ^
+Dùng để thực hiện phép XOR bitwise giữa từng cặp bit của hai số. Kết quả là 1 nếu chỉ một trong hai bit là 1.
+int a = result 1 ^ result 2;
+ví dụ 1^1 =>0; 1^0 =>1; 0^0 =>0
+-Shift left 
+Dùng để di chuyển bit sang trái 
+int a= result << 2
+ví du 0b00110011 => 11001100
+-Shift right
+Dùng để di chuyển bit sang phải
+int a= result >> 2
+ví du 0b00110011 => 00001100
