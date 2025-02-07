@@ -10,3 +10,4 @@ int main() {
     // const_ptr = &y;  // Không thể thay đổi địa chỉ của con trỏ
     return 0;
 }
+
