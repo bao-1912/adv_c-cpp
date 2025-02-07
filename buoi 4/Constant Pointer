@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int x = 10;
+    int y = 20;
+    int *const const_ptr = &x;  
+    printf("Gia tri ban dau: %d", *const_ptr);
+    *const_ptr = 15;  //  Có thể thay đổi giá trị của x thông qua con trỏ
+    printf("Gia tri sau khi thay doi: %d", *const_ptr);
+    // const_ptr = &y;  // Không thể thay đổi địa chỉ của con trỏ
+    return 0;
+}
