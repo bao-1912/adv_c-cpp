@@ -1,0 +1,17 @@
+storage_class: biến đặc biệt
+extern: là từ khóa thường đi kèm với khai báo biến mục đích báo cho trình biên dịch là biến, hàm đã được định nghĩa ở 1 file khác, cho phép những file khác trong cùng 1 thư mục có sử dụng chung những cái biến, hàm đó, 
+extern int a
+extern int b
+static
+(++a cộng trước rồi mới thực hiện
+a++ thực hiện xong mới cộng)
+khai báo biến static cục bộ
+static int a
+biến được khai báo với static chỉ được khởi tạo một lần duy nhất,địa chỉ sẽ tồn tại xuyên suất chương trình, giữ giá trị của biến này qua các lần gọi
+khai báo biến static toàn cục
+hạn chế phạm vị của đối tượng khai báo, chỉ được sử dụng trong file đã khai báo
+register: là sử dụng khi ưu tiên các biến đó trên các phép toán số học, khi trình biên dịch thấy sử dụng register nó sẽ lưu trữ trực tiếp trên thanh ghi thay vì trên ram
+không thể lấy được địa chỉ
+chỉ sử dụng cho biến cục bộ
+register int i
+volatile: báo cho trình biên dịch giá trị của biến có thể thay đổi ngẫu nhiên ngăn chặn phương trình tối ưu 
