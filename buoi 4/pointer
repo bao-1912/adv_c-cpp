@@ -23,3 +23,4 @@ NULL Pointer: con trỏ không trỏ đến bất cứ đối tượng nào cũn
 sử dụng khi khai báo 1 con trỏ chưa sử dụng
 sau khi sử dụng xong 
 int *ptr = Null;
+
