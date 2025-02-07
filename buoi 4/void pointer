@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    float b = 5.5;
+    char c = 'X';
+
+    void *ptr;  
+
+    ptr = &a;
+    printf("Gia tri cua a: %d", *(int *)ptr);
+    ptr = &b;
+    printf("Gia tri cua b: %f", *(float *)ptr);
+    ptr = &c;
+    printf("Gia tri cua c: %c", *(char *)ptr);
+    return 0;
