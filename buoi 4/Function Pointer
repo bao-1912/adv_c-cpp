@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int tong(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int (*func_pointer)(int, int);
+    func_pointer = tong;
+    int result = func_pointer(5, 3);
+    printf("Ket qua: %d", result);  
+
+    return 0;
+}
