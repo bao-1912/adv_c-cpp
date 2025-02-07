@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int x = 10, y = 20;
+    int const *ptr_const = &x;  
+    printf("Gia tri x: %d", *ptr_const);
+    // *ptr = 15  không thay đổi giá trị được
+    ptr_const = &y;  
+    printf("Gia tri y: %d", *ptr_const);
+
+    return 0;
+}
