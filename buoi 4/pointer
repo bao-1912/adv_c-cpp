@@ -1,0 +1,25 @@
+pointer con trỏ
+là một biến chứa địa chỉ của một đối tưởng khác (biến, mảng)
+int *ptr = &test
+lấy địa chỉ của test gán cho ptr tại một địa chỉ khác
+*ptr toán tử giải tham chiếu lấy giá trị tại địa chỉ này
+ptr lấy địa chỉ của giá trị
+void pointer: trỏ đến bất cứ địa chỉ nào, không cần biết kiểu dữ liệu tại địa chỉ đó
+void *ptr_void
+Function Pointer: con trỏ hàm, lưu giữ địa chỉ của một hàm, trỏ đến vùng nhớ chứa mã máy của hàm được định nghĩ 
+<return_type> (* func_pointer)(<data_type_1>, <data_type_2>);
+int test (*func_pointer)(double int char);
+void test(*func_pointer)();
+Pointer to Constant: con trỏ hằng không thể thay đổi giá trị tại địa chỉ mà con trỏ đến, chỉ được đọc giá trị ở địa chỉ đó
+int const *ptr_const; 
+const int *ptr_const;
+Constant Pointer: hằng con trỏ, chỉ được phép trỏ đến 1 địa chỉ của một đối tượng duy nhất, k thể trỏ đến đối tượng khác, có thể thay đổi giá trị ở địa chỉ đó
+int *const const_ptr = &value;
+Pointer to Pointer: lưu trữ địa chỉ của một con trỏ khác, con trỏ đến con trỏ cung cấp một bậc cao hơn
+int test = 5;
+int *ptr = &test;
+int **ptp = &ptr;
+NULL Pointer: con trỏ không trỏ đến bất cứ đối tượng nào cũng như địa chỉ nào hết, một con trỏ gán null gọi là trạng thái NULL(0x00)
+sử dụng khi khai báo 1 con trỏ chưa sử dụng
+sau khi sử dụng xong 
+int *ptr = Null;
